@@ -10,36 +10,23 @@
 
   <meta
     name="description"
-    content="Modern verified website with blue verified favicon."
+    content="Modern verified website with SVG blue check favicon."
   >
 
   <!-- ================================================= -->
-  <!-- DOMAIN -->
-  <!-- ================================================= -->
-
-  <link
-    rel="canonical"
-    href="https://altheric-verified.vercel.app/"
-  >
-
-  <!-- ================================================= -->
-  <!-- CLEAN FAVICON -->
+  <!-- SVG FAVICON -->
   <!-- ================================================= -->
 
   <link
     rel="icon"
-    href="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
-    type="image/png"
+    type="image/svg+xml"
+    href="/favicon.svg"
   >
 
+  <!-- PNG FALLBACK -->
   <link
-    rel="shortcut icon"
-    href="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+    rel="alternate icon"
+    href="/favicon.png"
   >
 
   <!-- ================================================= -->
@@ -49,46 +36,31 @@
   <meta property="og:type" content="website">
 
   <meta
-    property="og:url"
-    content="https://altheric-verified.vercel.app/"
-  >
-
-  <meta
     property="og:title"
     content="Altheric Verified"
   >
 
   <meta
     property="og:description"
-    content="Modern verified website with Discord and WhatsApp embed support."
+    content="Modern verified website with SVG verified favicon."
   >
 
-  <!-- IMPORTANT -->
-  <!-- DIRECT IMAGE ONLY -->
   <meta
     property="og:image"
-    content="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+    content="https://altheric-verified.vercel.app/og.png"
   >
 
   <meta
-    property="og:image:secure_url"
-    content="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+    property="og:url"
+    content="https://altheric-verified.vercel.app"
   >
-
-  <meta property="og:image:type" content="image/png">
-
-  <meta property="og:image:width" content="1200">
-
-  <meta property="og:image:height" content="630">
 
   <meta
     property="og:site_name"
     content="Altheric Verified"
   >
 
-  <!-- ================================================= -->
   <!-- TWITTER -->
-  <!-- ================================================= -->
 
   <meta
     name="twitter:card"
@@ -102,29 +74,17 @@
 
   <meta
     name="twitter:description"
-    content="Modern verified website with rich social preview."
+    content="Modern verified website with SVG verified favicon."
   >
 
   <meta
     name="twitter:image"
-    content="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+    content="https://altheric-verified.vercel.app/og.png"
   >
 
-  <!-- ================================================= -->
   <!-- MOBILE -->
-  <!-- ================================================= -->
 
   <meta name="theme-color" content="#1d9bf0">
-
-  <meta
-    name="apple-mobile-web-app-capable"
-    content="yes"
-  >
-
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  >
 
   <!-- ================================================= -->
   <!-- STYLE -->
@@ -203,17 +163,14 @@
       width:130px;
       height:130px;
 
-      border-radius:50%;
-
-      object-fit:cover;
+      margin:auto;
 
       margin-bottom:25px;
 
-      box-shadow:
-      0 0 45px rgba(59,130,246,.8);
-
       animation:float 4s ease-in-out infinite;
 
+      filter:
+      drop-shadow(0 0 30px rgba(59,130,246,.75));
     }
 
     h1{
@@ -296,10 +253,9 @@
 
     }
 
-    .verified img{
+    .verified svg{
       width:18px;
       height:18px;
-      border-radius:50%;
     }
 
     @keyframes float{
@@ -341,20 +297,93 @@
 
   <div class="card">
 
-    <img
+    <!-- SVG LOGO -->
+
+    <svg
       class="logo"
-      src="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
-      alt="Verified"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256"
     >
+
+      <defs>
+
+        <linearGradient
+          id="blueGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+
+          <stop offset="0%" stop-color="#4cc2ff"/>
+
+          <stop offset="100%" stop-color="#1d9bf0"/>
+
+        </linearGradient>
+
+        <filter
+          id="shadow"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+        >
+
+          <feDropShadow
+            dx="0"
+            dy="8"
+            stdDeviation="10"
+            flood-color="#1d9bf0"
+            flood-opacity="0.45"
+          />
+
+        </filter>
+
+      </defs>
+
+      <!-- BACKGROUND -->
+
+      <circle
+        cx="128"
+        cy="128"
+        r="120"
+        fill="url(#blueGradient)"
+        filter="url(#shadow)"
+      />
+
+      <!-- LIGHT -->
+
+      <ellipse
+        cx="95"
+        cy="80"
+        rx="55"
+        ry="28"
+        fill="white"
+        opacity="0.18"
+        transform="rotate(-18 95 80)"
+      />
+
+      <!-- CHECK -->
+
+      <path
+        d="M72 136L109 173L188 92"
+        fill="none"
+        stroke="white"
+        stroke-width="24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+    </svg>
 
     <h1>Altheric Verified</h1>
 
     <p>
-      Website dengan full Open Graph support,
+      Website dengan SVG verified favicon,
       WhatsApp preview,
       Discord embed,
       Twitter card,
-      dan verified favicon support.
+      dan modern social metadata support.
     </p>
 
     <div class="buttons">
@@ -371,9 +400,28 @@
 
     <div class="verified">
 
-      <img
-        src="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
       >
+
+        <circle
+          cx="128"
+          cy="128"
+          r="120"
+          fill="#1d9bf0"
+        />
+
+        <path
+          d="M72 136L109 173L188 92"
+          fill="none"
+          stroke="white"
+          stroke-width="24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+      </svg>
 
       Verified Secure Website
 
