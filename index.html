@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- FAVICON CENTANG BIRU -->
+  <!-- FAVICON -->
   <link
     rel="icon"
     type="image/png"
     sizes="300x300"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/300px-Twitter_Verified_Badge.svg.png"
+    href="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
   />
 
-  <title>Blue Check Website</title>
+  <title>Blue Verified</title>
 
   <style>
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, sans-serif;
+      font-family:Arial,sans-serif;
     }
 
     body{
@@ -27,25 +27,27 @@
       color:white;
       min-height:100vh;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       overflow:hidden;
     }
 
-    .container{
+    .box{
       text-align:center;
+      padding:40px;
     }
 
-    .badge{
+    .logo{
       width:120px;
       height:120px;
       border-radius:50%;
-      box-shadow:0 0 40px #3b82f6;
       margin-bottom:20px;
+      box-shadow:0 0 50px #3b82f6;
+      animation:float 3s ease-in-out infinite;
     }
 
     h1{
-      font-size:48px;
+      font-size:50px;
       margin-bottom:10px;
     }
 
@@ -57,12 +59,12 @@
     .btn{
       display:inline-block;
       margin-top:25px;
-      padding:14px 30px;
+      padding:14px 35px;
       background:#2563eb;
       color:white;
       text-decoration:none;
-      border-radius:12px;
-      transition:0.3s;
+      border-radius:14px;
+      transition:.3s;
       font-weight:bold;
     }
 
@@ -70,21 +72,33 @@
       background:#3b82f6;
       transform:scale(1.05);
     }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="box">
     <img
-      class="badge"
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/300px-Twitter_Verified_Badge.svg.png"
-      alt="Blue Check"
+      class="logo"
+      src="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
+      alt="Verified"
     />
 
-    <h1>Verified Website</h1>
-    <p>Website dengan favicon centang biru 300x300.</p>
+    <h1>Verified Site</h1>
+    <p>Favicon menggunakan centang biru custom.</p>
 
-    <a href="#" class="btn">Get Started</a>
+    <a href="#" class="btn">Continue</a>
   </div>
 
 </body>
