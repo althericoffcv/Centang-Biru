@@ -4,73 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- FAVICON -->
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="300x300"
-    href="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
-  />
+  <title>Lumi Verified</title>
 
-  <title>Blue Verified</title>
+  <!-- MULTIPLE FAVICON -->
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+
+  <meta name="theme-color" content="#1d9bf0">
 
   <style>
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial,sans-serif;
+      font-family:Arial, sans-serif;
     }
 
     body{
-      background:#0f172a;
-      color:white;
       min-height:100vh;
+      background:
+      radial-gradient(circle at top,#1e3a8a 0%,#0f172a 45%,#020617 100%);
+      overflow:hidden;
+      color:white;
       display:flex;
       justify-content:center;
       align-items:center;
-      overflow:hidden;
+      position:relative;
     }
 
-    .box{
+    .blur{
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:#2563eb;
+      filter:blur(180px);
+      opacity:.25;
+      border-radius:50%;
+      top:-150px;
+      right:-100px;
+    }
+
+    .card{
+      width:420px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(20px);
+      border-radius:28px;
+      padding:45px;
       text-align:center;
-      padding:40px;
+      box-shadow:
+      0 0 40px rgba(37,99,235,.25),
+      inset 0 0 20px rgba(255,255,255,.03);
+      z-index:2;
     }
 
     .logo{
       width:120px;
       height:120px;
       border-radius:50%;
-      margin-bottom:20px;
-      box-shadow:0 0 50px #3b82f6;
-      animation:float 3s ease-in-out infinite;
+      margin-bottom:25px;
+      box-shadow:
+      0 0 35px rgba(59,130,246,.7);
+      animation:float 4s ease-in-out infinite;
     }
 
     h1{
-      font-size:50px;
-      margin-bottom:10px;
+      font-size:42px;
+      margin-bottom:12px;
+      font-weight:700;
+      letter-spacing:.5px;
     }
 
     p{
-      color:#94a3b8;
-      font-size:18px;
+      color:#cbd5e1;
+      line-height:1.7;
+      font-size:16px;
+      margin-bottom:28px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      justify-content:center;
     }
 
     .btn{
-      display:inline-block;
-      margin-top:25px;
-      padding:14px 35px;
-      background:#2563eb;
-      color:white;
-      text-decoration:none;
+      padding:14px 28px;
       border-radius:14px;
+      text-decoration:none;
+      font-weight:600;
       transition:.3s;
-      font-weight:bold;
     }
 
-    .btn:hover{
+    .primary{
+      background:#2563eb;
+      color:white;
+      box-shadow:0 0 20px rgba(37,99,235,.45);
+    }
+
+    .primary:hover{
+      transform:translateY(-3px);
       background:#3b82f6;
-      transform:scale(1.05);
+    }
+
+    .secondary{
+      background:rgba(255,255,255,.08);
+      color:white;
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .secondary:hover{
+      background:rgba(255,255,255,.12);
+      transform:translateY(-3px);
+    }
+
+    .verified{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
+      margin-top:22px;
+      color:#60a5fa;
+      font-size:14px;
+    }
+
+    .verified img{
+      width:18px;
+      height:18px;
+      border-radius:50%;
     }
 
     @keyframes float{
@@ -78,27 +145,59 @@
         transform:translateY(0px);
       }
       50%{
-        transform:translateY(-10px);
+        transform:translateY(-12px);
       }
       100%{
         transform:translateY(0px);
+      }
+    }
+
+    @media(max-width:480px){
+      .card{
+        width:92%;
+        padding:35px 25px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      .buttons{
+        flex-direction:column;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
+  <div class="blur"></div>
+
+  <div class="card">
+
     <img
       class="logo"
       src="https://ik.imagekit.io/skyazsifv/20260529_052413.png"
-      alt="Verified"
-    />
+      alt="Verified Logo"
+    >
 
-    <h1>Verified Site</h1>
-    <p>Favicon menggunakan centang biru custom.</p>
+    <h1>Lumi Verified</h1>
 
-    <a href="#" class="btn">Continue</a>
+    <p>
+      Modern verified website dengan multiple favicon resolution,
+      optimized untuk browser, Discord embed, Android,
+      dan iOS home screen.
+    </p>
+
+    <div class="buttons">
+      <a href="#" class="btn primary">Get Started</a>
+      <a href="#" class="btn secondary">Learn More</a>
+    </div>
+
+    <div class="verified">
+      <img src="https://ik.imagekit.io/skyazsifv/20260529_052413.png">
+      Verified Secure Website
+    </div>
+
   </div>
 
 </body>
